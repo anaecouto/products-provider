@@ -1,6 +1,6 @@
-# Welcome to supermarket-producer-api! 🧲
+# Welcome to products-provider! 🧲
 
-> Gradle-based project. This project's goal is to extract data from an excel sheet (precos-ribeirao-preto.xlsx) containing the most varied products and their respective barcodes and send them to Kafka through a DTO so they can be consumed by the supermarket-api.
+> Gradle-based project. This project's goal is to extract data from an excel sheet (precos-ribeirao-preto.xlsx) containing the most varied products and their respective barcodes and send them to Kafka through a DTO so they can be consumed by the supermarket-rpa.
 
 ## Use docker to start kafka broker
 
@@ -12,7 +12,7 @@ docker-compose up -d
 
 After application has started, make an POST request to the following endpoint:
 ```sh
-localhost:8080/supermarket
+localhost:8080/products
 ```
 
 ## Server is ready to run!
