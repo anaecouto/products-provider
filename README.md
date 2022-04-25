@@ -12,8 +12,10 @@ docker-compose up -d
 
 After application has started, make an POST request to the following endpoint:
 ```sh
-localhost:8080/products
+localhost:8080/products?zipCode={zipCode_here}
 ```
+
+The endpoint receives a query param zipCode where you can input any valid zip code in it.
 
 ## Server is ready to run!
 
