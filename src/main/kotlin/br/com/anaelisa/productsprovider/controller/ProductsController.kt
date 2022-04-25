@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
@@ -12,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController
 class ProductsController(@Autowired private val productsResource: ProductsResource) {
 
     @PostMapping("")
-    fun create(): ResponseEntity<Unit> {
-        return ResponseEntity.ok(productsResource.readFromExcelFile())
+    fun create(@RequestParam zipCode: String): ResponseEntity<Unit> {
+        return ResponseEntity.ok(productsResource.readFromExcelFile(zipCode))
     }
 
 }

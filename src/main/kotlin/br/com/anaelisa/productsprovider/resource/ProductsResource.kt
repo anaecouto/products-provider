@@ -20,12 +20,10 @@ class ProductsResource(
     @Value("\${topic.name.producer}")
     private lateinit var topicName: String
 
-    fun readFromExcelFile() {
+    fun readFromExcelFile(zipCode: String) {
         val inputStream = FileInputStream("./precos-ribeirao-preto.xlsx")
         val workbook = WorkbookFactory.create(inputStream)
         val sheet = workbook.getSheetAt(1)
-
-        val zipCode = "14063181"
 
         sheet.filterIndexed { index, _ ->
             index >= 1
